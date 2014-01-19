@@ -1,11 +1,16 @@
 import os
+from os import environ
 import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-SECRET_KEY = '##%he5sc1%^9oqlf=dq8ae&k1kw(17q^)-=%f7u$rq9)_d06g_'
+SECRET_KEY = environ.get(
+    'SECRET_KEY',
+    '##%he5sc1%^9oqlf=dq8ae&k1kw(17q^)-=%f7u$rq9)_d06g_')
 
-DEBUG = True
+print SECRET_KEY
+
+DEBUG = False
 
 TEMPLATE_DEBUG = True
 

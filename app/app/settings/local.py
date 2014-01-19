@@ -1,6 +1,6 @@
 from base import *
 
-# set the local database
+DEBUG = True
 
 DATABASES = {
     'default': {

@@ -49,11 +49,20 @@ foreman command &ndash;
 
     foreman start
 
-If all is good, do your first deploy to Heroku
+If all is good, do your first deploy to Heroku &ndash;
 
     git push heroku master
 
-If you check your deploy once it's completed it will fail.
-Now scale up the worker to one
+Now scale up the worker to one &ndash;
 
     heroku ps:scale web=1
+
+If you check your deploy once it's completed it may fail if you try to
+do anything that hits the database, so sync the database.
+
+    heroku run python app/manage.py syncdb
+
+Finally, set the `SECRET_KEY` to something other than what is in the
+settings.
+
+All done.
