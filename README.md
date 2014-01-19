@@ -1,7 +1,7 @@
 # Django Heroku Skeleton
 
-This is a minimal Django skeleton app that will is set up for local
-development and ready to deploy to Heroku.
+This is a minimal Django skeleton project that is set up for local
+development and ready to deploy to [Heroku][1].
 
 
 ## Setting up for local development.
@@ -36,8 +36,8 @@ activate your virtualenv `./venv/bin/activate`_ ) &ndash;
 
 Make sure you've done the following three things
 
-* have a Heroku account
-* have the Heroku toolbelt installed
+* have a [Heroku][1] account
+* have the [Heroku toolbelt][0] installed
 * have auth'd against Heroku using `heroku login` command.
 
 Create the app
@@ -65,4 +65,9 @@ do anything that hits the database, so sync the database.
 Finally, set the `SECRET_KEY` to something other than what is in the
 settings.
 
-All done.
+    heroku config:set SECRET_KEY=YOUR-SECRET-KEY-GOES-HERE
+
+All done, enjoy.
+
+[0]: https://toolbelt.heroku.com/
+[1]: https://heroku.com/
