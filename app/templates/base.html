@@ -2,10 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-	{% block head %}
-		<title> django-writingfield demo </title>
-		<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}demo.css">
-		<link rel="shortcut icon" href="http://django-writingfield-demo.herokuapp.com/static/favicon.ico">
+		{% block head %}
+			<title> {% block title %} Heroku Skeleton {% endblock %} </title>
+			{% block css %}
+			<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}demo.css">
+			<link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico">
+			{% endblock %}
 		{% endblock %}
 	</head>
 	<body>

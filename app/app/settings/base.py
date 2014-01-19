@@ -9,7 +9,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['django-writingfield-demo.herokuapp.com']
+ALLOWED_HOSTS = ['*.herokuapp.com']
 
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -18,9 +18,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'writingfield',
     'gunicorn',
-    'things',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -33,14 +31,14 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'demo.urls'
+ROOT_URLCONF = 'app.urls'
 
-WSGI_APPLICATION = 'demo.wsgi.application'
+WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config()
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'en-gb'
 
 TIME_ZONE = 'UTC'
 
