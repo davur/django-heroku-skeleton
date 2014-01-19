@@ -13,7 +13,7 @@ DEBUG = True if environ.get('DEBUG') is True else False
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['*.herokuapp.com']
+ALLOWED_HOSTS = ['.herokuapp.com']
 
 INSTALLED_APPS = (
     'django.contrib.admin',
