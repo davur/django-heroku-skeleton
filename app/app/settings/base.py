@@ -8,8 +8,6 @@ SECRET_KEY = environ.get(
     'SECRET_KEY',
     '##%he5sc1%^9oqlf=dq8ae&k1kw(17q^)-=%f7u$rq9)_d06g_')
 
-print SECRET_KEY
-
 DEBUG = False
 
 TEMPLATE_DEBUG = True
