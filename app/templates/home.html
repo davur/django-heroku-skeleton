@@ -1,0 +1,31 @@
+{% block head %}
+<title> django-writingfield demo </title>
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}demo.css">
+<link rel="shortcut icon" href="http://django-writingfield-demo.herokuapp.com/static/favicon.ico">
+{% endblock %}
+
+{% block body %}
+<div class="container">
+	<section>
+		<h1> Hello </h1>
+		<p class="tour">
+			Welcome to the 
+			<a href="https://github.com/jamiecurle/django-writingfield">django-writingfield</a>
+			demo. When you click the below button you'll be logged into the admin and dropped
+			right into a working example.
+		</p>
+		<form method="post" action="/admin/things/thing/1/">
+			{% csrf_token %}
+			<input type="hidden" name="username" value="demo">
+			<input type="hidden" name="password" value="demo">
+			<input type="hidden" name="this_is_the_login_form" value="1">
+			<input type="hidden" name="next" value="/admin/things/thing/1/">
+			<button type="submit">Start Demo</button>
+		</form>
+		<p>
+			<iframe src="http://ghbtns.com/github-btn.html?user=jamiecurle&repo=django-writingfield&type=watch&size=large"
+			allowtransparency="true" frameborder="0" scrolling="0" width="80" height="30"></iframe>
+		</p>
+	</section>
+</div>
+{% endblock %}

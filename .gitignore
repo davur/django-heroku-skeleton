@@ -1,0 +1,3 @@
+venv
+srv/static/
+!srv/static/robots.txt

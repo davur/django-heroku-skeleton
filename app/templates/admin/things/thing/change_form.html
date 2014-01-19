@@ -1,0 +1,42 @@
+{% extends 'admin/change_form.html' %}
+
+{% block extrahead %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL}}hopscotch-0.1.2.min.css">
+<script src="{{ STATIC_URL}}hopscotch-0.1.2.min.js"></script>
+<script>
+var $ = django.jQuery;
+$(function(){
+	// whack the data-intro onto the element
+	$('a.fullscreen').attr('id', 'step_one');
+
+	var intro = {
+		id: "writingfield",
+		steps: [
+			{
+				title: "Start Writing",
+				content: "When you want to go fullscreen click the fullscreen icon.",
+				target: "step_one",
+				placement: "bottom",
+				xOffset: -20,
+				onNext: function(){
+					$('div.fullscreen-container').addClass('active');
+				}
+			},
+			{
+				title: "Write, Save & Close",
+				content: "Start writing and use ctrl+s / cmd+s to save your work and when you're done, press esc or click the icon again to return to the admin.",
+				target: "step_one",
+				placement: "bottom",
+				xOffset: -20
+			}
+		]
+	}
+
+	// Start the tour!
+	hopscotch.endTour(true)
+	hopscotch.startTour(intro, 0);
+});
+</script>
+
+{% endblock %}
