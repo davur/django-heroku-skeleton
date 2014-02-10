@@ -42,7 +42,7 @@ Make sure you've done the following three things
 
 Create the app
 
-    heroku apps:create sensible-app-name --region eu
+    heroku apps:create sensible-app-name --region eu   --buildpack git://github.com/heroku/heroku-buildpack-python.git
 
 Just double check that it's likely to run on Heroku by using the
 foreman command &ndash;
