@@ -52,6 +52,10 @@ foreman command &ndash;
 If all is good, do your first deploy to Heroku &ndash;
 
     git push heroku master
+    
+Set up a variable to point to your settings (_examples uses `base` but you may create your own `production` settings_)
+
+    heroku config:set DJANGO_SETTINGS_MODULE=app.settings.base
 
 Now scale up the worker to one &ndash;
 
